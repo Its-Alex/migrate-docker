@@ -9,7 +9,6 @@ RUN set -xe \
     && wget $DOWNLOAD_URL \
     && tar xvfz migrate.linux-amd64.tar.gz -C /tmp
 
-
 FROM frolvlad/alpine-glibc
 
 COPY --from=downloader /tmp/migrate.linux-amd64 /migrate

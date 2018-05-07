@@ -7,5 +7,6 @@ Create image for current [migrate](https://github.com/golang-migrate/migrate)
 For up migration
 
 ```
-$ docker run -v {{ migration dir }}:/migrations itsalex/migrate-docker -path=/migrations/ -database {{ database schema }} up
+$ docker run -v {{ migration dir }}:/migrations --network host itsalex/migrate-docker 
+    -path=/migrations/ -database {{ database schema }} up
 ```
